@@ -1,14 +1,15 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 module.exports = {
   //   devtool: "none",
-  entry: "./src/index.js",
+  entry: {
+    main: "./src/index.js",
+    takax: "./src/taka.js",
+  },
   output: {
     path: path.resolve(__dirname, "build"),
   },
-  // output: {
-  //   assetModuleFilename: "images/[hash].[ext]",
-  // },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
