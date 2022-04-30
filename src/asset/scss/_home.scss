@@ -6,9 +6,6 @@
   > * {
     height: 100%;
     backdrop-filter: blur(6px);
-    h1 {
-      // font-size: 5rem;
-    }
   }
 }
 
@@ -34,8 +31,6 @@
   &:hover {
     filter: unset;
   }
-}
-.custom-schedule {
 }
 .circle {
   width: 4rem;
