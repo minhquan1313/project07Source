@@ -5,7 +5,7 @@ module.exports = {
   //   devtool: "none",
   entry: {
     main: "./src/index.js",
-    takax: "./src/taka.js",
+    // css: "./src/css.js",
   },
   output: {
     path: path.resolve(__dirname, "build"),
@@ -17,30 +17,6 @@ module.exports = {
   ],
   module: {
     rules: [
-      {
-        test: /\.(scss)$/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-          {
-            loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                plugins: function () {
-                  return [require("autoprefixer")];
-                },
-              },
-            },
-          },
-          {
-            loader: "sass-loader",
-          },
-        ],
-      },
       {
         test: /\.html$/,
         use: ["html-loader"],

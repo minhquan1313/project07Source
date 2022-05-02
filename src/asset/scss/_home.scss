@@ -2,4 +2,142 @@
   background-image: url("../img/banner.jpg");
   background-size: cover;
   background-position: center;
+  height: 30rem;
+  > * {
+    height: 100%;
+    backdrop-filter: blur(6px);
+  }
+}
+
+.filter-purple {
+  position: relative;
+  &::after {
+    position: absolute;
+    inset: 0;
+    background: $primary;
+    opacity: 0.1;
+
+    content: "";
+  }
+}
+
+.trans {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.brightness-hover {
+  filter: brightness(0.3);
+  &:hover {
+    filter: unset;
+  }
+}
+.circle {
+  width: 4rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.bg-primary-hover:hover {
+  background: $primary;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 21/9;
+  min-height: 20rem;
+  overflow: hidden;
+  cursor: pointer;
+
+  .video-title {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+  }
+
+  .video-play {
+    z-index: 6;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+
+    pointer-events: none;
+
+    content: "";
+  }
+}
+
+.img {
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.custom-border-primary-hover {
+  border: 1px solid transparent;
+
+  &:hover {
+    border-color: $primary;
+  }
+}
+
+.custom-flag {
+  position: relative;
+  width: 100%;
+  &::after {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    aspect-ratio: 1/1;
+    background: inherit;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  }
+}
+.square {
+  // width: 4rem;
+  aspect-ratio: 1/1;
+}
+
+.match {
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+
+.divider-dark,
+.divider-light {
+  height: 1px;
+  width: 100%;
+}
+
+.divider-light {
+  background: $light;
+}
+
+.divider-dark {
+  background: $dark;
+}
+
+@media screen and (min-width: 576px) {
+  .custom-flag {
+    width: auto;
+    &::after {
+      content: "";
+    }
+  }
 }
