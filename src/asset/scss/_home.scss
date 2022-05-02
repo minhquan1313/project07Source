@@ -119,6 +119,20 @@
   }
 }
 
+.divider-dark,
+.divider-light {
+  height: 1px;
+  width: 100%;
+}
+
+.divider-light {
+  background: $light;
+}
+
+.divider-dark {
+  background: $dark;
+}
+
 @media screen and (min-width: 576px) {
   .custom-flag {
     width: auto;
